@@ -1,4 +1,6 @@
 class User < ActiveRecord::Base
+	has_many :articles
+	before_save { self.email = email.downcase }
 	validates :username, presence: true,
     uniqueness: { case_senstive: false },
     length: { minimum: 3, maximum: 25 }
@@ -6,4 +8,16 @@ class User < ActiveRecord::Base
     validates :email, presence: true, length: { maximum: 105 },
     		   uniqueness: { case_senstive: false },
     		   format: { with: VALID_EMAIL_REGEX }    		   
+
+    has_secure_password
 end 
+
+#add to migration file
+#def change
+#   add_column :articles, :user_id, :integer
+#end
+
+#add to migration 
+#def change
+#   add_column :users, :password_digest, :string
+#end
