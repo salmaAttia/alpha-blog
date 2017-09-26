@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'about', to: 'pages#about'
   
   resources :articles
-  
+  resources :followerships
   get 'signup', to: 'users#new'
   resources :users, except: [:new]
   
@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   delete 'logout', to: 'sessions#destroy'
   
   resources :categories, except: [:destroy]
+ 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

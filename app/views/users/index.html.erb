@@ -14,6 +14,8 @@
             <li><%= link_to "Delete this user", user_path(user), method: :delete,
                 data: { confirm: "Are you sure you want to delete the user and all their articles?" } %></li>
           <% end %>
+          <li><%= link_to "Follow this user", followership_path(user), method: :post,
+            data: { confirm: "Are you sure you want to follow this user?" } %></li>
         </div>
       </div>
     </ul>
