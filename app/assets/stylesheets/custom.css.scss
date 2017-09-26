@@ -1,16 +1,31 @@
-$navbar-default-bg: black;
-
 @import "bootstrap-sprockets";
 @import "bootstrap";
+
+.navbar-custom {
+  background-color: black;
+  font-weight: bold;
+}
+
+
+#item1 {
+  color: #F7F4F4;
+}
+
+#item1:hover {
+  color: #F50D0D;
+  text-decoration: none;
+}
 
 #logo {
   float: left;
   font-size: 1.7em;
-  color: #fff;
+  color: #F50D0D;
   text-transform: uppercase;
   letter-spacing: -1px;
   font-weight: bold;
 }
+
+
 
 #logo:hover {
   color: #fff;
@@ -22,7 +37,7 @@ $navbar-default-bg: black;
 }
 
 .jumbotron {
-  background-image: asset-url('new_cover_page.png');
+  background-image: asset-url('home_1.jpg');
   background-size: cover;
   height: 550px;
 }
